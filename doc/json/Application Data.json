@@ -1,0 +1,99 @@
+[
+ {
+  "Application Name": "Visio",
+  "Application Version": "3.0.1.1",
+  "Application Manufacturer": "Microsoft",
+  "Language": "English",
+  "PackageID": "PK-001",
+  "Compatibility Status": "Win 10",
+  "Type of Install": "Manual",
+  "SourcePath": "DVD",
+  "Application Status": "Rationalization"
+ },
+ {
+  "Application Name": "Office",
+  "Application Version": "3.0.1.1",
+  "Application Manufacturer": "Microsoft",
+  "Language": "English",
+  "PackageID": "PK-002",
+  "Compatibility Status": "Win 10",
+  "Type of Install": "Manual",
+  "SourcePath": "DISK",
+  "Application Status": "Packaging"
+ },
+ {
+  "Application Name": "Office",
+  "Application Version": "3.0.1.2",
+  "Application Manufacturer": "Microsoft",
+  "Language": "English",
+  "PackageID": "PK-0022",
+  "Compatibility Status": "Win 10",
+  "Type of Install": "Manual",
+  "SourcePath": "DISK",
+  "Application Status": "Packaging"
+ },
+ {
+  "Application Name": "Photoshop",
+  "Application Version": "3.0.1.1",
+  "Application Manufacturer": "Adobe",
+  "Language": "English",
+  "PackageID": "PK-003",
+  "Compatibility Status": "Win 10",
+  "Type of Install": "Manual",
+  "SourcePath": "USB",
+  "Application Status": "UAT"
+ },
+ {
+  "Application Name": "Illustrator",
+  "Application Version": "3.0.1.1",
+  "Application Manufacturer": "Adobe",
+  "Language": "English",
+  "PackageID": "PK-004",
+  "Compatibility Status": "Win 10",
+  "Type of Install": "Manual",
+  "SourcePath": "DVD",
+  "Application Status": "Ready"
+ },
+ {
+  "Application Name": "After Effect",
+  "Application Version": "3.0.1.1",
+  "Application Manufacturer": "Adobe",
+  "Language": "English",
+  "PackageID": "PK-005",
+  "Compatibility Status": "Win 10",
+  "Type of Install": "Manual",
+  "SourcePath": "DISK",
+  "Application Status": "Rationalization"
+ },
+ {
+  "Application Name": "Premiere",
+  "Application Version": "3.0.1.1",
+  "Application Manufacturer": "Adobe",
+  "Language": "English",
+  "PackageID": "PK-006",
+  "Compatibility Status": "Win 10",
+  "Type of Install": 123,
+  "SourcePath": "USB",
+  "Application Status": "Packaging"
+ },
+ {
+  "Application Name": "Animate",
+  "Application Version": "3.0.1.1",
+  "Application Manufacturer": "Adobe",
+  "Language": "Dutch",
+  "PackageID": "PK-007",
+  "Compatibility Status": "Win 10",
+  "Type of Install": "Packaged",
+  "Application Status": "abc"
+ },
+ {
+  "Application Name": "VSCode",
+  "Application Version": "3.0.1.1",
+  "Application Manufacturer": "Microsoft",
+  "Language": "Dutch",
+  "PackageID": "PK-007",
+  "Compatibility Status": "Win 10",
+  "Type of Install": "Packaged",
+  "Application Status": "Ready"
+ }
+]
