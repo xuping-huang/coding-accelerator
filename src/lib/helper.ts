@@ -43,21 +43,21 @@ export function isLongColumn(name: string, length: number = 10, precision: numbe
   return false;
 }
 
-export function isFloatColumn(name: string, length: number = 24, precision: number = 6): boolean {
+export function isFloatColumn(name: string, _length: number = 24, _precision: number = 6): boolean {
   if (FLOAT_NAMES.includes(name)) {
     return true;
   }
   return false;
 }
 
-export function isDoubleColumn(name: string, length: number = 24, precision: number = 6): boolean {
+export function isDoubleColumn(name: string, _length: number = 24, _precision: number = 6): boolean {
   if (DOUBLE_NAMES.includes(name)) {
     return true;
   }
   return false;
 }
 
-export function isDecimalColumn(name: string, length: number = 24, precision: number = 6): boolean {
+export function isDecimalColumn(name: string, _length: number = 24, _precision: number = 6): boolean {
   if (DECIMAL_NAMES.includes(name)) {
     return true;
   }
@@ -106,7 +106,7 @@ export function isJsonColumn(name: string): boolean {
   return false;
 }
 
-export function isStringColumn(name: string): boolean {
+export function isStringColumn(_name: string): boolean {
   return true;
 }
 

@@ -115,7 +115,7 @@ export class GenNode extends BaseNode implements Executable, ModelPropertyDefine
     this._operationId = value;
   }
 
-  execute(provider: vscode.TreeDataProvider<any>): void {
+  execute(_provider: vscode.TreeDataProvider<any>): void {
     throw new Error("Method not implemented.");
   }
 

@@ -17,7 +17,7 @@ export class ExecutableNode extends CodeNode implements Executable {
     super(label, tip, collapsibleState, nodeType, parent);
   }
 
-  execute(provider: CodeUtilProvider) {
+  execute(_provider: CodeUtilProvider) {
   }
 
 }

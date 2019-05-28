@@ -27,6 +27,8 @@ import { UnitTestConvertor } from './pasteUtils/convert/UnitTestConvertor';
 import { JoiSchema2TestConvertor } from './pasteUtils/convert/JoiSchem2TestConvertor';
 import { SwaggerModel2JsonDataConverter } from './pasteUtils/convert/SwaggerModel2JsonDataConverter';
 import { SwaggerModel2JoiSchemaConverter } from './pasteUtils/convert/SwaggerModel2JoiSchemaConvertor';
+import { StringListParser } from './pasteUtils/parser/StringListParser';
+import { PropertiesConvertor } from './pasteUtils/convert/PropertiesConvertor';
 
 export class CodeUtilProvider implements vscode.TreeDataProvider<CodeNode> {
   private _onDidChangeTreeData: vscode.EventEmitter<CodeNode | undefined> = new vscode.EventEmitter<CodeNode | undefined>();
@@ -35,7 +37,7 @@ export class CodeUtilProvider implements vscode.TreeDataProvider<CodeNode> {
   private _otherItems: CodeNode[] = [];
   private _tops: CodeNode[] = [];
 
-  constructor(context: vscode.ExtensionContext) {
+  constructor(_context: vscode.ExtensionContext) {
   }
 
   refresh(): void {
@@ -88,6 +90,7 @@ export class CodeUtilProvider implements vscode.TreeDataProvider<CodeNode> {
     this._pasteItems.push(new PasteNode('Joi Schema >> Test', 'Convert the schema definition of Joi to a parameter definition style for unit tests', new JoiSchemaParser(), new JoiSchema2TestConvertor(), parent));
     this._pasteItems.push(new PasteNode('Swagger Model >> Json Data', 'Convert the Model definition of Swagger to JSON', new SwaggerModelParser(), new SwaggerModel2JsonDataConverter(), parent, true));
     this._pasteItems.push(new PasteNode('Swagger Model >> Joi Schema', 'Convert the Model definition of Swagger to Joi.Schema', new SwaggerModelParser(), new SwaggerModel2JoiSchemaConverter(), parent, true));
+    this._pasteItems.push(new PasteNode('Strings >> Properties', 'Converts strings separated by a comma or line to properties', new StringListParser(), new PropertiesConvertor(), parent));
     return Promise.resolve(this._pasteItems);
   }
 

@@ -29,7 +29,7 @@ export class GenerateCodeProvider implements vscode.TreeDataProvider<GenNode> {
   private _modelProps: any = {};
   private _apis: GenNode[] = [];
 
-  constructor(context: vscode.ExtensionContext) {
+  constructor(_context: vscode.ExtensionContext) {
   }
 
   refresh(): void {

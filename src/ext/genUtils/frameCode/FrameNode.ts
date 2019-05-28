@@ -1,5 +1,4 @@
 import * as vscode from 'vscode';
-import * as _ from 'lodash';
 import { NodeType } from '../NodeType';
 import { BaseNode } from '../../BaseNode';
 import { GenNode } from '../GenNode';

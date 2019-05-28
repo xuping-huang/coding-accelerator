@@ -28,7 +28,7 @@ export class UnitTestConvertor implements CodeConvertor {
     return false;
   }
 
-  private genGetTest(testUnit: TestUnitDefine): string[] {
+  private genGetTest(_testUnit: TestUnitDefine): string[] {
     const contents: string[] = [];
 
     contents.push(`  const record = await theService.get(params)`);
@@ -38,7 +38,7 @@ export class UnitTestConvertor implements CodeConvertor {
     return contents;
   }
 
-  private genSearchTest(testUnit: TestUnitDefine): string[] {
+  private genSearchTest(_testUnit: TestUnitDefine): string[] {
     const contents: string[] = [];
 
     contents.push(`  const record = await theService.search(params)`);
@@ -48,7 +48,7 @@ export class UnitTestConvertor implements CodeConvertor {
     return contents;
   }
 
-  private genPostTest(testUnit: TestUnitDefine): string[] {
+  private genPostTest(_testUnit: TestUnitDefine): string[] {
     const contents: string[] = [];
 
     contents.push(`  const oldObj = await TheModel.findOne({ where: { id: 'new id' }, paranoid: false });`);
@@ -63,7 +63,7 @@ export class UnitTestConvertor implements CodeConvertor {
     return contents;
   }
 
-  private genPutTest(testUnit: TestUnitDefine): string[] {
+  private genPutTest(_testUnit: TestUnitDefine): string[] {
     const contents: string[] = [];
 
     contents.push(`  const oldObj = await TheModel.findOne({ where: { id: 'updated id' }, paranoid: false });`);
@@ -76,7 +76,7 @@ export class UnitTestConvertor implements CodeConvertor {
     return contents;
   }
 
-  private genPatchTest(testUnit: TestUnitDefine): string[] {
+  private genPatchTest(_testUnit: TestUnitDefine): string[] {
     const contents: string[] = [];
 
     contents.push(`  const oldObj = await TheModel.findOne({ where: { id: 'updated id' }, paranoid: false });`);
@@ -89,7 +89,7 @@ export class UnitTestConvertor implements CodeConvertor {
     return contents;
   }
 
-  private genDeleteTest(testUnit: TestUnitDefine): string[] {
+  private genDeleteTest(_testUnit: TestUnitDefine): string[] {
     const contents: string[] = [];
 
     contents.push(`  const oldObj = await TheModel.findOne({ where: { id: 'deleted id' }, paranoid: false });`);

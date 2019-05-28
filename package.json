@@ -2,8 +2,8 @@
   "name": "coding-accelerator",
   "displayName": "Coding Accelerator",
   "description": "Accelerate Code Development Toolset",
-  "publisher": "xuping.huang",
-  "version": "0.0.1",
+  "publisher": "coding-accelerator",
+  "version": "0.0.2",
   "engines": {
     "vscode": "^1.30.0"
   },

@@ -3,19 +3,18 @@ import * as fs from 'fs';
 import * as path from 'path';
 import * as vscode from 'vscode';
 import * as yaml from 'js-yaml';
-import { exec } from 'child_process';
 import { NodeExecuter } from "../Executer";
 import { GenerateCodeProvider } from '../genUtils/GenerateCodeProvider';
 import { NodeType } from '../genUtils/NodeType';
 import { ServiceNode } from '../genUtils/serviceCode/ServiceNode';
-import { ModelPropertyDefine, ModelDefine, PathDefine } from './SwaggerSelectExecuter';
+import { ModelDefine, PathDefine } from './SwaggerSelectExecuter';
 import { GenNode } from '../genUtils/GenNode';
 
 export class ServiceCodeGenerator implements NodeExecuter {
   constructor() {
   }
 
-  async run(node: ServiceNode, provider: GenerateCodeProvider): Promise<void> {
+  async run(_node: ServiceNode, provider: GenerateCodeProvider): Promise<void> {
     const subNodes = await provider.getServiceCodeSubs();
     const swaggerNode = <ServiceNode>subNodes.find(item => item.nodeType === NodeType.ServiceCodeSwaggerItem);
     if (!swaggerNode || _.isEmpty(swaggerNode.swaggerPath)) {
