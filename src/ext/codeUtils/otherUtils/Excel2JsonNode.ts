@@ -4,7 +4,7 @@ import { ExecutableNode } from '../ExecutableNode';
 import { CodeNode } from '../CodeNode';
 import { NodeType } from '../NodeType';
 import { CodeUtilProvider } from '../CodeUtilProvider';
-import { Excel2JsonExecuter } from '../executer/Excel2JsonExecuter';
+import { Excel2JsonExecuter } from '../../executer/Excel2JsonExecuter';
 
 export class Excel2JsonNode extends ExecutableNode {
   private _excelFilePath: PathLike | undefined = undefined;

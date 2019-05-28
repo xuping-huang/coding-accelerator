@@ -2,9 +2,6 @@ import * as vscode from 'vscode';
 import { CodeUtilProvider } from './CodeUtilProvider';
 import { CodeNode } from './CodeNode';
 import { ExecutableNode } from './ExecutableNode';
-// import { CodeNode } from './CodeNode';
-// import { PasteConfigNode } from './pasteUtils/PasteConfigNode';
-
 
 export function registerCodeUtils( context: vscode.ExtensionContext){
   const codeUtilProvider = new CodeUtilProvider(context);

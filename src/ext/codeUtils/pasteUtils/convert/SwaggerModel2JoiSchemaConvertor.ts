@@ -1,11 +1,10 @@
 import * as _ from 'lodash';
-import { PasteNode } from '../PasteNode';
 import { CodeConvertor } from '../Converter';
 import { SwaggerModelDefine } from '../model/SwaggerModelDefine';
 import { SwaggerModelPropertyDefine } from '../model/SwaggerModelPropertyDefine';
 
 export class SwaggerModel2JoiSchemaConverter implements CodeConvertor {
-  convert(models: SwaggerModelDefine[], node: PasteNode): string {
+  convert(models: SwaggerModelDefine[] /*, node: PasteNode*/): string {
     const lines: string[] = [];
     try {
       _.each(models, model => {

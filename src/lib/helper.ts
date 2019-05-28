@@ -1,12 +1,12 @@
 
-export const switchChangeContextValue = (contextValue: string|undefined, isSwitchOn: boolean): string|undefined => {
+export const switchChangeContextValue = (contextValue: string|undefined, prefix: string, isOn: boolean): string|undefined => {
   if (!contextValue) { return contextValue; }
 
   let returnValue = contextValue;
-  if (isSwitchOn) {
-    returnValue = contextValue.replace('switchable:off', 'switchable:on');
+  if (isOn) {
+    returnValue = contextValue.replace(`:${prefix}:off`, `:${prefix}:on`);
   } else {
-    returnValue = contextValue.replace('switchable:on', 'switchable:off');
+    returnValue = contextValue.replace(`:${prefix}:on`, `:${prefix}:off`);
   }
   return returnValue;
 };

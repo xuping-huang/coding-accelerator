@@ -51,8 +51,104 @@
         }
       },
       {
+        "command": "gen.node.toggle.on",
+        "title": "node switch on",
+        "icon": {
+          "light": "media/light/switchOn.svg",
+          "dark": "media/dark/switchOn.svg"
+        }
+      },
+      {
+        "command": "gen.node.toggle.off",
+        "title": "node switch off",
+        "icon": {
+          "light": "media/light/switchOff.svg",
+          "dark": "media/dark/switchOff.svg"
+        }
+      },
+      {
+        "command": "gen.node.execute",
+        "title": "execute node default",
+        "icon": {
+          "light": "media/light/execute.svg",
+          "dark": "media/dark/execute.svg"
+        }
+      },
+      {
+        "command": "gen.config.setting",
+        "title": "set config property value",
+        "icon": {
+          "light": "media/light/edit.svg",
+          "dark": "media/dark/edit.svg"
+        }
+      },
+      {
         "command": "clipboard.paste",
         "title": "Paste"
+      },
+      {
+        "command": "gen.node.model.on",
+        "title": "node model on",
+        "icon": {
+          "light": "media/light/modelOn.svg",
+          "dark": "media/dark/modelOn.svg"
+        }
+      },
+      {
+        "command": "gen.node.model.off",
+        "title": "node model off",
+        "icon": {
+          "light": "media/light/modelOff.svg",
+          "dark": "media/dark/modelOff.svg"
+        }
+      },
+      {
+        "command": "gen.node.pagination.on",
+        "title": "node pagination on",
+        "icon": {
+          "light": "media/light/paginationOn.svg",
+          "dark": "media/dark/paginationOn.svg"
+        }
+      },
+      {
+        "command": "gen.node.pagination.off",
+        "title": "node pagination off",
+        "icon": {
+          "light": "media/light/paginationOff.svg",
+          "dark": "media/dark/paginationOff.svg"
+        }
+      },
+      {
+        "command": "gen.node.key.on",
+        "title": "node key on",
+        "icon": {
+          "light": "media/light/keyOn.svg",
+          "dark": "media/dark/keyOn.svg"
+        }
+      },
+      {
+        "command": "gen.node.key.off",
+        "title": "node key off",
+        "icon": {
+          "light": "media/light/keyOff.svg",
+          "dark": "media/dark/keyOff.svg"
+        }
+      },
+      {
+        "command": "gen.node.fkey.on",
+        "title": "node foreign key on",
+        "icon": {
+          "light": "media/light/fkeyOn.svg",
+          "dark": "media/dark/fkeyOn.svg"
+        }
+      },
+      {
+        "command": "gen.node.fkey.off",
+        "title": "node foreign key off",
+        "icon": {
+          "light": "media/light/fkeyOff.svg",
+          "dark": "media/dark/fkeyOff.svg"
+        }
       }
     ],
     "keybindings": [
@@ -88,22 +184,82 @@
       "view/item/context": [
         {
           "command": "codeUtils.nodeToggleOff",
-          "when": "viewItem =~ /switchable:off/",
+          "when": "view == codeUtils && viewItem =~ /switchable:off/",
           "group": "inline"
         },
         {
           "command": "codeUtils.nodeToggleOn",
-          "when": "viewItem =~ /switchable:on/",
+          "when": "view == codeUtils && viewItem =~ /switchable:on/",
           "group": "inline"
         },
         {
           "command": "node.execute",
-          "when": "viewItem =~ /:executable/",
+          "when": "view == codeUtils && viewItem =~ /:executable/",
           "group": "inline"
         },
         {
           "command": "config.property.setting",
-          "when": "viewItem =~ /:configurable/",
+          "when": "view == codeUtils && viewItem =~ /:configurable/",
+          "group": "inline"
+        },
+        {
+          "command": "gen.node.toggle.off",
+          "when": "view == codeGenerators && viewItem =~ /switchable:off/",
+          "group": "inline"
+        },
+        {
+          "command": "gen.node.toggle.on",
+          "when": "view == codeGenerators && viewItem =~ /switchable:on/",
+          "group": "inline"
+        },
+        {
+          "command": "gen.node.execute",
+          "when": "view == codeGenerators && viewItem =~ /:executable/",
+          "group": "inline"
+        },
+        {
+          "command": "gen.config.setting",
+          "when": "view == codeGenerators && viewItem =~ /:configurable/",
+          "group": "inline"
+        },
+        {
+          "command": "gen.node.model.off",
+          "when": "view == codeGenerators && viewItem =~ /:model:off/",
+          "group": "inline"
+        },
+        {
+          "command": "gen.node.model.on",
+          "when": "view == codeGenerators && viewItem =~ /:model:on/",
+          "group": "inline"
+        },
+        {
+          "command": "gen.node.pagination.off",
+          "when": "view == codeGenerators && viewItem =~ /:pagination:off/",
+          "group": "inline"
+        },
+        {
+          "command": "gen.node.pagination.on",
+          "when": "view == codeGenerators && viewItem =~ /:pagination:on/",
+          "group": "inline"
+        },
+        {
+          "command": "gen.node.key.off",
+          "when": "view == codeGenerators && viewItem =~ /:key:off/",
+          "group": "inline"
+        },
+        {
+          "command": "gen.node.key.on",
+          "when": "view == codeGenerators && viewItem =~ /:key:on/",
+          "group": "inline"
+        },
+        {
+          "command": "gen.node.fkey.off",
+          "when": "view == codeGenerators && viewItem =~ /:fkey:off/",
+          "group": "inline"
+        },
+        {
+          "command": "gen.node.fkey.on",
+          "when": "view == codeGenerators && viewItem =~ /:fkey:on/",
           "group": "inline"
         }
       ]

@@ -4,7 +4,7 @@ import { PasteNode } from './PasteNode';
 import { NodeType } from '../NodeType';
 import { CodeUtilProvider } from '../CodeUtilProvider';
 import { ExecutableNode } from '../ExecutableNode';
-import { NodeExecuter } from '../executer';
+import { NodeExecuter } from '../../Executer';
 
 export class PasteConfigNode extends ExecutableNode {
   constructor(
